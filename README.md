@@ -27,6 +27,16 @@ Things you may want to cover:
 
 ```
 bin/rails generate controller Articles index --skip-routes
+
 bin/rails generate model Article title:string body:text
+bin/rails db:migrate
+
+bin/rails generate model Comment commenter:string body:text article:references
+bin/rails db:migrate
+
+bin/rails generate controller Comments
+
+bin/rails generate migration AddStatusToArticles status:string
+bin/rails generate migration AddStatusToComments status:string
 bin/rails db:migrate
 ```
